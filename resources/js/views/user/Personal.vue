@@ -1,7 +1,7 @@
 <template>
     <div class="w-96 mx-auto">
         <!-- <Stat :stats="stats"></Stat> -->
-        <div class="mb-4">
+        <!-- <div class="mb-4">
             <div class=" mb-3">
                 <input v-model="title" class="w-96 rounded-3xl border p-2 border-slate-300" type="text"
                        placeholder="title">
@@ -33,12 +33,12 @@
                 <a @click.prevent="store" href="#" class="block p-2 w-32 text-center rounded-3xl bg-green-600 text-white
                 hover:bg-white hover:border hover:border-green-600 hover:text-green-600 box-border ml-auto">Publish</a>
             </div>
-        </div>
+        </div> -->
 
-        <div v-if="posts">
+        <!-- <div v-if="posts">
             <h1 class="mb-8 pb-8 border-b border-gray-400">Posts</h1>
-            <!-- <Post v-for="post in posts" :post="post"></Post> -->
-        </div>
+            <Post v-for="post in posts" :post="post"></Post>
+        </div> -->
 
     </div>
 </template>
@@ -60,14 +60,14 @@ export default {
         }
     },
 
-    components: {
-        Post,
-        Stat
-    },
+    // components: {
+    //     Post,
+    //     Stat
+    // },
 
     mounted() {
-        this.getPosts()
-        this.getStats()
+        // this.getPosts()
+        // this.getStats()
     },
 
     methods: {
