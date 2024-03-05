@@ -16,7 +16,7 @@
                     <!-- <p v-for="error in errors.content" class="text-sm mb-2 text-red-500">{{ error }}</p> -->
                 </div>
             </div>
-            <!-- <div class="flex mb-3 items-center">
+            <div class="flex mb-3 items-center">
                 <div>
                     <input @change="storeImage" ref="file" type="file" class="hidden">
                     <a href="#" class="block p-2 w-16 text-center text-sm rounded-3xl bg-sky-500 text-white"
@@ -25,7 +25,7 @@
                 <div>
                     <a v-if="image" @click.prevent="image = null" class="ml-3" href="#">Cancel</a>
                 </div>
-            </div> -->
+            </div>
             <!-- <div v-if="image">
                 <img :src="image.url" alt="preview">
             </div> -->
@@ -53,9 +53,9 @@ export default {
         return {
             title: '',
             content: '',
-            // image: null,
+            image: null,
             // posts: [],
-            // errors: [],
+            errors: [],
             // stats: []
         }
     },
@@ -99,6 +99,7 @@ export default {
                 this.errors = e.response.data.errors
             })
         },
+        
         selectFile() {
             this.fileInput = this.$refs.file;
             this.fileInput.click();
