@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function post {
+    public function post(){
         return 111111;
     }
 }

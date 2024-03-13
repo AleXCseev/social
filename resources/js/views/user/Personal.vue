@@ -26,9 +26,9 @@
                     <a v-if="image" @click.prevent="image = null" class="ml-3" href="#">Cancel</a>
                 </div>
             </div>
-            <!-- <div v-if="image">
+            <div v-if="image">
                 <img :src="image.url" alt="preview">
-            </div> -->
+            </div>
             <div>
                 <a @click.prevent="store" href="#" class="block p-2 w-32 text-center rounded-3xl bg-green-600 text-white
                 hover:bg-white hover:border hover:border-green-600 hover:text-green-600 box-border ml-auto">Publish</a>
@@ -110,9 +110,10 @@ export default {
             const formData = new FormData()
             formData.append('image', file)
 
-            axios.post('/api/post_images', formData)
+            axios.post('/api/post_image', formData)
                 .then(res => {
                     this.image = res.data.data
+                    console.log(res)
                 })
         }
 

@@ -11,4 +11,9 @@ class PostImage extends Model
 
     protected $table = 'post_images';
     protected $quarded = false;
+    protected $fillable = ['path'];
+
+    public function getUrlAttribute() {
+        return url('storage/' . $this->path);
+    }
 }
