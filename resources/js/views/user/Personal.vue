@@ -93,7 +93,7 @@ export default {
                     this.title = ''
                     this.content = ''
                     this.image = null
-                    this.posts.unshift(res.data.data)
+                    // this.posts.unshift(res.data.data)
                 })
             .catch( e => {
                 this.errors = e.response.data.errors
@@ -110,10 +110,9 @@ export default {
             const formData = new FormData()
             formData.append('image', file)
 
-            axios.post('/api/post_image', formData)
+            axios.post('/api/post_images', formData)
                 .then(res => {
                     this.image = res.data.data
-                    console.log(res)
                 })
         }
 
